@@ -250,12 +250,12 @@ with col_scale:
         fig_scale.add_shape(
             type="line",
             x0=-0.2, x1=0,
-            y0=100-i, y1=100-i,  # Y座標を反転
+            y0=100-i, y1=100-i,
             line=dict(color="black", width=1)
         )
         # パーセント表示
         fig_scale.add_annotation(
-            x=-0.3, y=100-i,  # Y座標を反転
+            x=-0.3, y=100-i,
             text=f"{i}%",
             showarrow=False,
             font=dict(size=10)
@@ -264,23 +264,21 @@ with col_scale:
     fig_scale.update_layout(
         showlegend=False,
         plot_bgcolor='white',
-        width=20,
-        height=500,  # 画像の高さに合わせる
-        margin=dict(l=0, r=0, t=0, b=0, pad=0),
+        width=50,
+        height=500,
+        margin=dict(l=40, r=0, t=0, b=0, pad=0),
         xaxis=dict(
             showgrid=False,
             showticklabels=False,
-            range=[-0.5, 0.2],
+            range=[-1, 0.2],
             fixedrange=True
         ),
         yaxis=dict(
             showgrid=False,
             showticklabels=False,
-            range=[-5, 105],
+            range=[0, 100],
             autorange="reversed",
-            fixedrange=True,
-            scaleanchor="x",
-            scaleratio=1
+            fixedrange=True
         )
     )
 
